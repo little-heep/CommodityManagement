@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1162</width>
+    <height>612</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #FFF0F5; /* 浅粉色背景 */
+    color: #FF1493;            /* 深粉色文字 */
+	font: 8pt &quot;幼圆&quot;;
+    border-radius: 8px;        /* 圆角效果 */
+}
+
+QPushButton {
+    background-color: &quot;lightblue&quot;; /* 按钮背景 */
+    color: white;              /* 白色文字 */
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(124, 243, 219); /* 鼠标悬停时深粉色 */
+}
+
+QPushButton:pressed {
+    background-color: rgb(159, 226, 230); /* 按下时更深的粉色 */
+}
+
+QLineEdit {
+    background-color: #FFE4E1; /* 浅粉色输入框背景 */
+    color: #FF1493;            /* 深粉色文字 */
+    border: 1px solid #FF69B4;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QLabel {
+    color: rgb(255, 0, 127);            /* 粉色标签文字 */
+}
+
+QTableWidget {
+    background-color: #FFF0F5; /* 表格背景颜色 */
+    alternate-background-color: #FFE4E1; /* 偶数行背景颜色 */
+    color: #FF1493;            /* 文字颜色 */
+    gridline-color: #FF69B4;   /* 表格线颜色 */
+    border: 1px solid #FF69B4; /* 边框颜色 */
+    border-radius: 8px;
+    selection-background-color: #FFB6C1; /* 选中单元格背景颜色 */
+    selection-color: #FFFFFF;  /* 选中单元格文字颜色 */
+}
+
+QHeaderView::section {
+    background-color: &quot;lightblue&quot;; /* 表头背景颜色 */
+    color: white;              /* 表头文字颜色 */
+    padding: 5px;
+    border: 1px solid #FF69B4; /* 表头边框颜色 */
+    border-radius: 5px;
+}
+
+QTableCornerButton::section {
+    background-color: &quot;lightblue&quot;; /* 左上角按钮背景颜色 */
+    border: 1px solid #FF69B4;
+}
+
+QScrollBar:vertical {
+	background-color: rgb(255, 155, 178);/* 垂直滚动条背景 */
+    width: 12px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: rgb(255, 0, 127); /* 滚动条手柄颜色 */
+    min-height: 20px;
+    border-radius: 6px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    background-color:  rgb(255, 155, 178); /* 水平滚动条背景 */
+    height: 12px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: rgb(255, 0, 127); /* 滚动条手柄颜色 */
+    min-width: 20px;
+    border-radius: 6px;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    background: none;
+}
+</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>1141</width>
+     <height>471</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>1141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="addbtn">
+      <property name="text">
+       <string>新增商品</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="deletebtn">
+      <property name="text">
+       <string>下架商品</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="inbtn">
+      <property name="text">
+       <string>入库商品</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="outbtn">
+      <property name="text">
+       <string>出库商品</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="totalbtn">
+      <property name="text">
+       <string>数据汇总</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="resultbtn">
+      <property name="text">
+       <string>导出数据</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>1141</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>商品编号：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="selectbtn">
+      <property name="text">
+       <string>查询商品信息</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
